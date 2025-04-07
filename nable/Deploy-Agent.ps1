@@ -11,6 +11,6 @@ function Deploy-Agent {
 		Write-Output "N-Able already installed."
 	} else {
 		Write-Output "Installing N-Able."
-		"C:\ITadmin\$CompanyID.exe"
+		Start-Process -FilePath "C:\ITadmin\$CompanyID.exe"
 	}
 }
