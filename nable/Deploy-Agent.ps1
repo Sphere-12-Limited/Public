@@ -8,7 +8,7 @@ function Deploy-Agent {
 		New-Item "C:\ITadmin" -ItemType Directory | Out-Null
 	}
  
- 	irm "https://raw.githubusercontent.com/Sphere-12-Limited/Public/refs/heads/main/nable/$CompanyID.exe" -OutFile "C:\ITadmin\$CompanyID.exe"
+ 	irm "https://github.com/Sphere-12-Limited/Public/raw/refs/heads/main/nable/$CompanyID.EXE" -OutFile "C:\ITadmin\$CompanyID.exe"
   
 	$CheckInstalled = Get-WmiObject -Class Win32_Product | Where {$_.Name -like "*MSP Core Agent*"}
 	if ($CheckInstalled) {
