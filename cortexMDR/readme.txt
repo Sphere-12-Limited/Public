@@ -1,1 +1,0 @@
-CortexMDR install file
