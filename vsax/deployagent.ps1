@@ -1,5 +1,4 @@
 function Deploy-VSAX {
-
   param(
     [Parameter(Mandatory)]
     [string]$VSAXURL
