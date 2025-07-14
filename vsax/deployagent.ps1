@@ -8,5 +8,10 @@ function Deploy-VSAX {
     New-Item -Path "C:\S12" -ItemType "Directory"
   }
 
-  Invoke-WebRequest $VSAXURL -OutFile "C:\S12\agent.msi"
+  $Agent = "C:\S12\agent.msi"
+  Invoke-WebRequest $VSAXURL -OutFile $Agent
+
+  msiexec /i $Agent /qn
+
+  Remove-Item $Agent
 }
