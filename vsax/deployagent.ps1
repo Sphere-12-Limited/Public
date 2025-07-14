@@ -13,5 +13,6 @@ function Deploy-VSAX {
 
   msiexec /i $Agent /qn
 
+  Start-Sleep -Seconds 15
   Remove-Item $Agent
 }
